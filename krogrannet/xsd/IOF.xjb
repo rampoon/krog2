@@ -1,0 +1,22 @@
+<!--
+
+This file described the JAXB binding for IOF.xsd schema (as used when the elements 
+originally where created...)
+
+ -->
+<jxb:bindings version="1.0"
+               xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <jxb:bindings schemaLocation="IOF.xsd" node="/xs:schema">
+    <jxb:schemaBindings>
+      <jxb:package name="se.krogrannet.xsd.IOF">
+        <jxb:javadoc><![CDATA[
+	        <body>Made by Mats Javehed
+			</body>
+		]]>
+		</jxb:javadoc>
+      </jxb:package>
+    </jxb:schemaBindings>
+
+  </jxb:bindings>
+</jxb:bindings>
