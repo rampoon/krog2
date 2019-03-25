@@ -18,7 +18,7 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
-		<!-- https://mvnrepository.com/artifact/log4j/apache-log4j-extras -->
+
 		<dependency>
     		<groupId>log4j</groupId>
     		<artifactId>apache-log4j-extras</artifactId>
@@ -43,7 +43,7 @@
 						<phase>validate</phase>
 						<goals>
 							<goal>copy-resources</goal>
-						</goals>
+						</goals> 	
 						<configuration>
 							<outputDirectory>${project.basedir}/target/classes</outputDirectory>
 							<resources>          
@@ -53,6 +53,26 @@
 								</resource>
 							</resources>              
 						</configuration>            
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+							<overWriteReleases>false</overWriteReleases>
+							<overWriteSnapshots>false</overWriteSnapshots>
+							<overWriteIfNewer>true</overWriteIfNewer>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>

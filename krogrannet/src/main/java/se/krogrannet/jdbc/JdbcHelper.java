@@ -5,7 +5,7 @@ import java.sql.*;
 public class JdbcHelper {
 	//static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
 	static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-	static final String DB_URL = "jdbc:mysql://localhost:3306/elit_krogra?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Stockholm";
+	static final String DB_URL = "jdbc:mysql://localhost:3306/elit_krogra?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Stockholm&verifyServerCertificate=false&useSSL=false&requireSSL=false";
 	
 	static final String USERNAME = "root";
 	static final String PASSWORD = "root";

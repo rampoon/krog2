@@ -22,8 +22,12 @@
 
    <!-- A time/date based rolling appender -->
    <appender name="FILE" class="org.apache.log4j.rolling.RollingFileAppender">
-      <param name="File" value="c:/logs/krogrannet.log"/>
+      <param name="File" value="${rootDir}/logs/krogrannet.log"/>
       <param name="Append" value="true"/>
+	  
+      <rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+      	<param name="FileNamePattern" value="${catalina.home}/logs/krogrannet.%d{yyyy-MM-dd}.log.zip" />
+      </rollingPolicy>
 
       <layout class="org.apache.log4j.PatternLayout">
          <!-- The default pattern: Date Priority [Logger] Message\n -->
