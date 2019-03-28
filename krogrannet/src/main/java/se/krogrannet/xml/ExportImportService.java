@@ -1,6 +1,8 @@
 package se.krogrannet.xml;
 
+import javax.xml.bind.JAXBException;
+
 public interface ExportImportService {
 
-	public void exportForMeos();
+	public String exportForMeos() throws JAXBException, ClassNotFoundException;
 }
