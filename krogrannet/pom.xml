@@ -11,8 +11,8 @@
 	<organization>
 		<name>Albarex Inc</name>
 	</organization>
-
 	<dependencies>
+
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
