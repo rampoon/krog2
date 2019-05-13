@@ -53,7 +53,7 @@
    <!-- ======================= -->
 
   <root>
-      <level class="org.apache.log4j.Level" value="INFO"/>
+      <level class="org.apache.log4j.Level" value="DEBUG"/>
       <appender-ref ref="CONSOLE"/>
       <appender-ref ref="FILE"/>
    </root>
